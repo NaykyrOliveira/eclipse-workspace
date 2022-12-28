@@ -2,7 +2,11 @@ package byteBankHerdado;
 
 public class Gerente extends Funcionario implements Autenticavel {
 	
-	private int senha;
+	private Autenticador autenticador;
+	
+	public Gerente() {
+		this.autenticador = new Autenticador();
+	}
 	
 	public double getBonificacao() {
 		System.out.println("chamando o método de bonificação do gerente");
@@ -12,16 +16,12 @@ public class Gerente extends Funcionario implements Autenticavel {
 	@Override
 	public void setSenha(int senha) {
 		// TODO Auto-generated method stub
-		this.senha = senha;
+		this.autenticador.setSenha(senha);;
 	}
 
 	@Override
 	public boolean autentica(int senha) {
 		// TODO Auto-generated method stub
-		if(this.senha == senha) {
-			return true;
-		} else {
-			return false;
-		}
+		return this.autenticador.autentica(senha);
 	}
 }
