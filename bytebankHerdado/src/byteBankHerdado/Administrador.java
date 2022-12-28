@@ -7,6 +7,12 @@ public class Administrador extends Funcionario implements Autenticavel {
 	public Administrador() {
 		this.autenticador = new Autenticador();
 	}
+	
+	@Override
+	public double getBonificacao() {
+		// TODO Auto-generated method stub
+		return 50;
+	}
 
 	@Override
 	public void setSenha(int senha) {
@@ -19,11 +25,4 @@ public class Administrador extends Funcionario implements Autenticavel {
 		// TODO Auto-generated method stub
 		return this.autenticador.autentica(senha);
 	}
-
-	@Override
-	public double getBonificacao() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }

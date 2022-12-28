@@ -2,22 +2,21 @@ package byteBankHerdado;
 
 public class Cliente implements Autenticavel {
 
-	private int senha;
+	private Autenticador autenticador;
+	
+	public Cliente() {
+		this.autenticador = new Autenticador();
+	}
 	
 	@Override
 	public void setSenha(int senha) {
 		// TODO Auto-generated method stub
-		this.senha = senha;
+		this.autenticador.setSenha(senha);
 	}
 
 	@Override
 	public boolean autentica(int senha) {
 		// TODO Auto-generated method stub
-		
-		if(this.senha == senha) {
-			return true;
-		} else {
-			return false;
-		}
+		return this.autenticador.autentica(senha);
 	}
 }
