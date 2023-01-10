@@ -2,7 +2,7 @@ package bytebankHerdadoConta;
 
 public class TesteContas {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SaldoInsuficienteException {
 		
 		ContaCorrente contaCorrente = new ContaCorrente(111, 111);
 		contaCorrente.deposita(100.0);

@@ -1,13 +1,13 @@
 package javaPilha;
 
-public class Fluxo {
+public class FluxoComError {
 
     public static void main(String[] args) {
         System.out.println("Ini do main");
         
         try {
         	metodo1();
-        } catch(Exception ex) {
+        } catch(ArithmeticException | NullPointerException | MinhaExcecao ex) {
         	String mensagem = ex.getMessage();
         	System.out.println("Exception " + mensagem);
         	ex.printStackTrace();
@@ -25,9 +25,8 @@ public class Fluxo {
 
     private static void metodo2() throws MinhaExcecao {
         System.out.println("Ini do metodo2");
+        throw new MinhaExcecao("Deu errado");
         
-        throw new NullPointerException("deu errdo");
-        
-        // System.out.println("Fim do metodo2");
+        //System.out.println("Fim do metodo2");
     }
 }
