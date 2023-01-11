@@ -1,4 +1,8 @@
-package bytebankHerdadoConta;
+package bytebankHerdadoConta.teste;
+
+import bytebankHerdadoConta.modelo.Conta;
+import bytebankHerdadoConta.modelo.ContaCorrente;
+import bytebankHerdadoConta.modelo.SaldoInsuficienteException;
 
 public class TesteSaca {
 
